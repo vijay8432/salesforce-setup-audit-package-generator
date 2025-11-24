@@ -1,0 +1,7 @@
+<apex:page showHeader="false" 
+    sidebar="false" 
+    cache="false"
+    applyHtmlTag="false" 
+    applyBodyTag="false"
+    contentType="{!$CurrentPage.parameters.mimeType}; charset=UTF-8; filename={!$CurrentPage.parameters.filename}" 
+>{!$CurrentPage.parameters.content}</apex:page>
