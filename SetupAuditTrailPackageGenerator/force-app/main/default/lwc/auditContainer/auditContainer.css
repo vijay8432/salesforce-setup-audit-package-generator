@@ -1,0 +1,64 @@
+.datatable-container {
+    max-height: 520px;
+    overflow-y: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem;
+    background: #ffffff;
+}
+
+/* small helper text under inputs */
+.helper-text {
+    font-size: 0.75rem;
+    color: #6b6b6b;
+    margin-top: 0.25rem;
+}
+
+/* center action button nicely */
+.action-row {
+    display: flex;
+    justify-content: center;
+}
+
+/* make the card a tad more prominent */
+:host lightning-card {
+    --lwc-card-border-radius: 10px;
+}
+
+/* subtle hover on table rows (native datatable styling may override) */
+.slds-table tbody tr:hover {
+    background: rgba(0, 112, 210, 0.03);
+}
+
+.xml-code-container {
+    max-height: 200px;
+    /* Limits the height */
+    overflow-y: auto;
+    /* Adds scrollbar */
+    background-color: #f7f9fb;
+    /* Light background */
+    border: 1px solid #dddbda;
+    padding: 10px;
+}
+
+.xml-code {
+    white-space: pre-wrap;
+    /* Allows long lines to wrap */
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Target the modal container and increase z-index dramatically */
+.slds-modal.slds-fade-in-open {
+    /* Use !important as a last resort to bypass LWC's shadow DOM styling rules */
+    z-index: 10000 !important; 
+    position: fixed !important; /* Ensure it's not relative to a clipped container */
+}
+
+/* Target the backdrop to ensure it covers everything else */
+.slds-backdrop.slds-backdrop_open {
+    z-index: 9999 !important; /* One level below the modal */
+}
